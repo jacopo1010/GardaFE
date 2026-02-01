@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard</title>
+
+  <link rel="icon" href="favicon/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+
+<body class="dashboard-body" data-page="dashboard">
+  <div class="app-shell" style="margin-left: 0;">
+    <header class="app-header acme-topbar">
+      <div class="topbar-left">
+        <div class="brand-block">
+          <img src="img/logo.svg" alt="Area Demo">
+          <div class="brand-text">
+            <div class="brand-name">Area Demo</div>
+            <div class="brand-sub">Gestionale EPG</div>
+          </div>
+        </div>
+
+        <nav class="topbar-nav" aria-label="Sezioni principali">
+          <a class="topnav-link is-active" href="dashboard.html">
+            <i class="bi bi-speedometer2"></i><span>Dashboard</span>
+          </a>
+
+          <a class="topnav-link" href="contabilita.html">
+            <i class="bi bi-cash-stack"></i><span>Contabilità</span>
+          </a>
+
+          <a class="topnav-link" href="interventi.html">
+            <i class="bi bi-tools"></i><span>Interventi</span>
+          </a>
+
+          <a class="topnav-link" href="logistica.html">
+            <i class="bi bi-people"></i><span>Logistica</span>
+          </a>
+
+          <a class="topnav-link" href="clienti.html">
+            <i class="bi bi-person-lines-fill"></i><span>Clienti</span>
+          </a>
+
+        
+        </nav>  
+      </div>
+
+      <div class="topbar-right">
+        <div class="lang-toggle" aria-label="Lingua">
+          <button type="button" class="langBtn isActive" data-lang="it">IT</button>
+          <button type="button" class="langBtn" data-lang="en">EN</button>
+        </div>
+
+        <button class="icon-btn" type="button" aria-label="Notifiche">
+          <i class="bi bi-bell"></i>
+          <span class="badge-dot" aria-label="3 notifiche non lette">3</span>
+        </button>
+
+        <button class="profile-btn" type="button" aria-label="Apri profilo">
+          <img src="img/avatar.png" alt="Profilo" class="avatar">
+          <span class="profile-name">admin01</span>
+          <span class="chev">▾</span>
+        </button>
+      </div>
+    </header>
+
+
+
+    <main class="dash-container">
+      <section class="widget-grid" style="grid-template-columns: 1fr 2fr 1fr;">
+        <div class="widget-card">
+          <div class="card-head">
+            <div>
+              <div class="card-title"><i class="bi bi-cash-stack title-icon"></i>Contabilità</div>
+              <div class="card-sub">Ordini del mese</div>
+            </div>
+          </div>
+          <div class="kpi-card hero-card" style="margin-bottom: 12px;">
+            <div class="kpi-label"><i class="bi bi-graph-up kpi-icon"></i>Totale ordini del mese</div>
+            <div class="kpi-value">€ 154.350</div>
+            <div class="kpi-delta positive">+9.5%</div>
+          </div>
+          <div class="list-block">
+            <div class="list-item"><span>Scaduto da pagare</span><span>€ 4.520</span></div>
+            <div class="list-item"><span>2 fatture in scadenza</span><span>3 giorni</span></div>
+            <div class="list-item"><span>Varitek Srl</span><span>€ 3.200</span></div>
+            <div class="list-item"><span>TecnoParts S.p.A.</span><span>€ 1.320</span></div>
+          </div>
+          <div class="chart-placeholder skeleton" style="height: 140px;">Scadenze ordini</div>
+        </div>
+
+        <div class="widget-card">
+          <div class="card-head">
+            <div>
+              <div class="card-title"><i class="bi bi-tools title-icon"></i>Interventi</div>
+              <div class="card-sub">Mappa e attività</div>
+            </div>
+          </div>
+          <div class="chart-placeholder skeleton" style="height: 210px;">Mappa interventi</div>
+          <div class="mini-metrics" style="margin-top: 12px;">
+            <div>
+              <div class="kpi-label">Furgoni in uso</div>
+              <div class="kpi-value">3</div>
+            </div>
+            <div>
+              <div class="kpi-label">Liberi</div>
+              <div class="kpi-value">5</div>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Fornitore</th>
+                  <th>Ordini</th>
+                  <th>Totale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Varitek Srl</td>
+                  <td>12</td>
+                  <td>€ 132.350</td>
+                </tr>
+                <tr>
+                  <td>Mario Rossi</td>
+                  <td>8</td>
+                  <td>€ 92.120</td>
+                </tr>
+                <tr>
+                  <td>Laura Conti</td>
+                  <td>6</td>
+                  <td>€ 49.500</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="widget-card">
+          <div class="card-head">
+            <div>
+              <div class="card-title"><i class="bi bi-box-seam title-icon"></i>Magazzino</div>
+              <div class="card-sub">Inventario</div>
+            </div>
+          </div>
+          <div class="mini-metrics">
+            <div>
+              <div class="kpi-label">Valore inventario</div>
+              <div class="kpi-value">€ 52.100</div>
+            </div>
+            <div>
+              <div class="kpi-label">Articoli totali</div>
+              <div class="kpi-value">3.245</div>
+            </div>
+          </div>
+          <div class="chart-placeholder skeleton" style="height: 180px;">Donut inventario</div>
+          <div class="list-block" style="margin-top: 12px;">
+            <div class="list-item"><span>Filtro olio A125</span><button
+                class="btn btn-outline-primary btn-sm">Riordina</button></div>
+            <div class="list-item"><span>Pastiglie freno 4568P</span><button
+                class="btn btn-outline-primary btn-sm">Riordina</button></div>
+            <div class="list-item"><span>Cinghia servizi B147</span><button
+                class="btn btn-outline-primary btn-sm">Riordina</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dash-wide">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="orders"><i class="bi bi-receipt tab-icon"></i>Ordini recenti</button>
+          <button class="tab-btn" data-tab="stock"><i class="bi bi-box-seam tab-icon"></i>Magazzino</button>
+          <button class="tab-btn" data-tab="assegnazioni"><i class="bi bi-clipboard-check tab-icon"></i>Assegnazioni
+            furgoni</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="orders">
+          <div class="table-toolbar">
+            <input class="form-control form-control-sm" type="search" placeholder="Cerca ordine">
+            <select class="form-select form-select-sm">
+              <option>Stato</option>
+              <option>Pagato</option>
+              <option>Da pagare</option>
+            </select>
+            <select class="form-select form-select-sm">
+              <option>Periodo</option>
+              <option>7 giorni</option>
+              <option>30 giorni</option>
+            </select>
+          </div>
+          <div class="table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Ordine</th>
+                  <th>Cliente</th>
+                  <th>Importo</th>
+                  <th>Stato</th>
+                  <th>Data</th>
+                  <th>Azione</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#5801</td>
+                  <td>Logistica N.</td>
+                  <td>€ 3.200</td>
+                  <td><span class="badge badge-success"><span class="status-dot dot-success"></span>Pagato</span></td>
+                  <td>Oggi</td>
+                  <td><button class="btn btn-outline-primary btn-sm">Dettagli</button></td>
+                </tr>
+                <tr>
+                  <td>#5794</td>
+                  <td>Cliente Beta</td>
+                  <td>€ 1.980</td>
+                  <td><span class="badge badge-danger"><span class="status-dot dot-danger"></span>Scaduto</span></td>
+                  <td>Ieri</td>
+                  <td><button class="btn btn-outline-primary btn-sm">Dettagli</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="stock">
+          <div class="table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Codice</th>
+                  <th>Articolo</th>
+                  <th>Scorta</th>
+                  <th>Stato</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>A125</td>
+                  <td>Filtro olio</td>
+                  <td>2</td>
+                  <td><span class="badge badge-warning"><span class="status-dot dot-warning"></span>Basso</span></td>
+                </tr>
+                <tr>
+                  <td>4568P</td>
+                  <td>Pastiglie freno</td>
+                  <td>6</td>
+                  <td><span class="badge badge-pending"><span class="status-dot dot-pending"></span>Monitorare</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="assegnazioni">
+          <div class="table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Meccanico</th>
+                  <th>Furgone</th>
+                  <th>Assegnato dal</th>
+                  <th>Scadenza</th>
+                  <th>Azione</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>G. Verdi</td>
+                  <td>FG-121</td>
+                  <td>20/01</td>
+                  <td>10/02</td>
+                  <td><button class="btn btn-outline-primary btn-sm">Dettagli</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+  <script>
+    // Gestione click sulle tab (header e sezione wide)
+    document.querySelectorAll('.tabs .tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // toggle active nel gruppo di bottoni (.tabs)
+        const group = btn.parentElement;
+        group.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // se il bottone ha data-tab, mostra il pannello corrispondente
+        const target = btn.dataset.tab;
+        if (target) {
+          document.querySelectorAll('.tab-panel').forEach(panel => {
+            panel.classList.toggle('active', panel.dataset.panel === target);
+          });
+        }
+      });
+    });
+
+    // Toggle lingua
+    document.querySelectorAll('.lang-toggle .langBtn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.lang-toggle .langBtn').forEach(b => b.classList.remove('isActive'));
+        btn.classList.add('isActive');
+        document.documentElement.lang = btn.dataset.lang || 'it';
+      });
+    });
+
+    // Miglioramento: rendere i bottoni con ruolo=button accessibili via tastiera (Enter/Space)
+    document.querySelectorAll('.tab-btn, .langBtn, .icon-btn, .profile-btn, .btn').forEach(el => {
+      el.setAttribute('tabindex', '0');
+      el.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
